@@ -4,20 +4,23 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <meta name="theme-color" content="#0F1C2E"/>
-<meta name="description" content="Golden Pipit Careers — CV rewrites, LinkedIn optimisation, and personal narrative coaching for professionals in transition."/>
+<meta name="description" content="Golden Pipit Careers — CV rewrites, LinkedIn optimisation, and the Executive Presence Package for senior professionals."/>
 <meta property="og:title" content="Golden Pipit Careers — Shift Happens. Land Well."/>
 <meta property="og:description" content="Most professionals are far better than their LinkedIn profile suggests. We fix that."/>
 <meta property="og:type" content="website"/>
 <title>Golden Pipit Careers — Shift Happens. Land Well.</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet"/>
 <script src="https://unpkg.com/lucide@latest"></script>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 :root{
   --gold:#F5A623;--gold-light:#FEF3DC;--gold-mid:#f0c06e;--gold-dark:#C4811A;
   --navy:#0F1C2E;--navy-mid:#1a2d42;--navy-light:#EFF3F7;
+  --champagne:#C8A552;--champagne-soft:#D4B868;--champagne-dark:#A8883A;
+  --champagne-tint:rgba(200,165,82,0.10);--champagne-line:rgba(200,165,82,0.28);
+  --noir:#0a0e14;--noir-2:#14171e;
   --dark:#1A1A1A;--muted:#6B7280;--border:#E5E7EB;
   --bg:#FFFFFF;--bg2:#F9F9F7;--r:10px;
   --shadow-sm:0 4px 14px rgba(15,28,46,0.08);
@@ -27,7 +30,7 @@
   --card-border:rgba(229,231,235,0.85);
 }
 html{scroll-behavior:smooth}
-body{font-family:'Inter',sans-serif;color:var(--dark);background:var(--bg);line-height:1.6;font-size:16px}
+body{font-family:'Inter',sans-serif;color:var(--dark);background:var(--bg);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased}
 a{text-decoration:none;color:inherit}
 button{font-family:inherit}
 a:focus-visible,button:focus-visible{outline:none;box-shadow:var(--ring);border-radius:12px}
@@ -37,19 +40,16 @@ a:focus-visible,button:focus-visible{outline:none;box-shadow:var(--ring);border-
 section{scroll-margin-top:84px}
 @media(max-width:768px){section{scroll-margin-top:76px}}
 
-/* CONTAINER */
 .container{max-width:var(--max);margin:0 auto}
 .container.narrow{max-width:var(--max-narrow)}
 .pad{padding-left:40px;padding-right:40px}
 @media(max-width:768px){.pad{padding-left:16px;padding-right:16px}}
 
-/* SECTION COMMON */
 .section-label{font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
 .section-title{font-size:clamp(26px,3.5vw,40px);font-weight:800;letter-spacing:-0.03em;line-height:1.12;margin-bottom:16px;color:var(--dark);text-wrap:balance}
 .section-sub{font-size:16px;color:var(--muted);max-width:62ch;margin-left:auto;margin-right:auto;line-height:1.7}
 
-/* BUTTONS */
-.btn-gold,.btn-ghost,.btn-navy,.form-submit{
+.btn-gold,.btn-ghost,.btn-navy,.form-submit,.btn-champagne,.btn-noir{
   border-radius:12px;min-height:44px;display:inline-flex;align-items:center;justify-content:center;gap:8px;
   transition:transform .18s ease,opacity .18s ease,box-shadow .18s ease;font-weight:700;
 }
@@ -59,8 +59,11 @@ section{scroll-margin-top:84px}
 .btn-ghost:hover{transform:translateY(-1px);opacity:0.85}
 .btn-navy{padding:13px 28px;background:var(--navy);color:#fff;font-size:14px;box-shadow:var(--shadow-sm)}
 .btn-navy:hover{transform:translateY(-1px);opacity:0.9}
+.btn-champagne{padding:13px 28px;background:var(--champagne);color:var(--noir);font-size:14px;box-shadow:0 10px 24px rgba(200,165,82,0.22)}
+.btn-champagne:hover{transform:translateY(-1px);opacity:0.92}
+.btn-noir{padding:13px 28px;background:transparent;color:#fff;font-size:14px;border:1px solid rgba(255,255,255,0.25)}
+.btn-noir:hover{transform:translateY(-1px);border-color:var(--champagne-line);background:var(--champagne-tint)}
 
-/* SOFT CARDS */
 .card-soft{background:#fff;border:1px solid var(--card-border);box-shadow:var(--shadow-sm);border-radius:14px}
 .card-soft:hover{border-color:rgba(240,192,110,0.55);box-shadow:var(--shadow-md)}
 
@@ -70,17 +73,43 @@ nav{position:sticky;top:0;z-index:100;background:rgba(15,28,46,0.97);backdrop-fi
 .nav-logo img{height:36px;width:auto}
 .nav-logo-text{color:#fff;font-size:15px;font-weight:700}
 .nav-logo-text span{display:block;font-size:10px;font-weight:500;color:rgba(255,255,255,0.4);letter-spacing:0.1em;text-transform:uppercase;margin-top:1px}
-.nav-right{display:flex;align-items:center;gap:20px}
+.nav-right{display:flex;align-items:center;gap:18px}
 .nav-link{font-size:13px;color:rgba(255,255,255,0.55);font-weight:500;transition:color .2s}
 .nav-link:hover{color:#fff}
+/* Fractional pill — distinct champagne accent */
+.nav-fractional{
+  display:inline-flex;align-items:center;gap:6px;
+  padding:8px 14px;
+  border-radius:100px;
+  background:linear-gradient(135deg,rgba(200,165,82,0.18),rgba(200,165,82,0.06));
+  border:1px solid rgba(200,165,82,0.4);
+  font-size:12px;font-weight:600;
+  color:#fff;
+  letter-spacing:0.02em;
+  transition:transform .2s,background .2s,border-color .2s;
+}
+.nav-fractional:hover{
+  background:linear-gradient(135deg,rgba(200,165,82,0.30),rgba(200,165,82,0.14));
+  border-color:rgba(200,165,82,0.65);
+  transform:translateY(-1px);
+}
+.nav-fractional .star{color:var(--champagne);font-size:11px}
 .nav-cta{display:inline-flex;align-items:center;gap:8px;padding:9px 20px;background:var(--gold);color:var(--navy);border-radius:12px;font-size:13px;font-weight:700;min-height:44px;box-shadow:0 8px 20px rgba(245,166,35,0.2);transition:transform .18s,opacity .18s}
 .nav-cta:hover{transform:translateY(-1px);opacity:0.92}
 .nav-hamburger{display:none;background:none;border:none;cursor:pointer;padding:8px;flex-direction:column;gap:5px}
 .nav-hamburger span{display:block;width:22px;height:2px;background:rgba(255,255,255,0.7);border-radius:2px}
-.nav-drawer{display:none;position:fixed;top:68px;left:0;right:0;background:rgba(15,28,46,0.99);padding:24px 20px;flex-direction:column;gap:4px;z-index:99;border-bottom:1px solid rgba(255,255,255,0.1)}
+.nav-drawer{display:none;position:fixed;top:68px;left:0;right:0;background:rgba(15,28,46,0.99);padding:20px 16px;flex-direction:column;gap:4px;z-index:99;border-bottom:1px solid rgba(255,255,255,0.1)}
 .nav-drawer.open{display:flex}
-.nav-drawer a{font-size:15px;color:rgba(255,255,255,0.7);font-weight:500;padding:12px 8px;border-bottom:1px solid rgba(255,255,255,0.07)}
+.nav-drawer a{font-size:15px;color:rgba(255,255,255,0.7);font-weight:500;padding:14px 8px;border-bottom:1px solid rgba(255,255,255,0.07)}
 .nav-drawer a:hover{color:#fff}
+.nav-drawer .drawer-fractional{
+  background:linear-gradient(135deg,rgba(200,165,82,0.16),rgba(200,165,82,0.06));
+  border:1px solid rgba(200,165,82,0.35);
+  border-radius:10px;
+  margin-top:8px;
+  padding:14px 16px;
+}
+.nav-drawer .drawer-fractional .star{color:var(--champagne)}
 
 /* HERO */
 .hero{background:var(--navy);padding:120px 40px 100px;text-align:center;position:relative;overflow:hidden}
@@ -107,10 +136,10 @@ nav{position:sticky;top:0;z-index:100;background:rgba(15,28,46,0.97);backdrop-fi
 .hero-ctas{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
 
 /* STATS */
-.stats-band{background:var(--gold);padding:52px 40px}
+.stats-band{background:var(--gold-light);padding:52px 40px;border-top:3px solid var(--gold-mid);border-bottom:3px solid var(--gold-mid)}
 .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;max-width:var(--max);margin:0 auto;text-align:center}
 .stat-num{font-size:36px;font-weight:800;color:var(--navy);line-height:1;margin-bottom:6px}
-.stat-label{font-size:13px;color:rgba(15,28,46,0.7);line-height:1.4}
+.stat-label{font-size:13px;color:var(--muted);line-height:1.4}
 
 /* PROBLEM */
 .problem{background:var(--bg2);padding:100px 40px}
@@ -125,18 +154,20 @@ nav{position:sticky;top:0;z-index:100;background:rgba(15,28,46,0.97);backdrop-fi
 .service-card{padding:32px 28px;border-radius:14px;border:1px solid var(--card-border);box-shadow:var(--shadow-sm);background:#fff;transition:border-color .2s,box-shadow .2s;position:relative}
 .service-card:hover{border-color:rgba(240,192,110,0.55);box-shadow:var(--shadow-md)}
 .service-card.featured{border-top:3px solid var(--gold)}
+.service-card.executive{border-top:3px solid var(--champagne);background:linear-gradient(180deg,rgba(200,165,82,0.04),#fff)}
+.service-card.executive:hover{border-color:rgba(200,165,82,0.55)}
 .service-badge{display:inline-block;font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:3px 10px;border-radius:100px;margin-bottom:16px}
 .service-badge.gold{background:var(--gold-light);color:var(--gold-dark)}
 .service-badge.navy{background:var(--navy-light);color:var(--navy)}
+.service-badge.champagne{background:var(--champagne-tint);color:var(--champagne-dark);border:1px solid var(--champagne-line)}
 .service-icon{width:40px;height:40px;border-radius:10px;background:var(--gold-light);display:flex;align-items:center;justify-content:center;margin-bottom:16px;color:var(--gold-dark)}
+.service-icon.champagne{background:var(--champagne-tint);color:var(--champagne-dark);border:1px solid var(--champagne-line)}
 .service-icon svg{width:20px;height:20px}
 .service-card h3{font-size:17px;font-weight:700;color:var(--dark);margin-bottom:10px}
 .service-card p{font-size:14px;color:var(--muted);line-height:1.7}
-.service-delivery{background:var(--navy);border-radius:14px;padding:32px 28px;margin-top:24px}
-.service-delivery h3{font-size:16px;font-weight:700;color:#fff;margin-bottom:8px}
-.service-delivery p{font-size:14px;color:rgba(255,255,255,0.6);line-height:1.7;margin-bottom:16px}
-.delivery-pills{display:flex;flex-wrap:wrap;gap:8px}
-.dpill{font-size:12px;padding:4px 12px;border-radius:100px;background:rgba(245,166,35,0.12);color:var(--gold);border:1px solid rgba(245,166,35,0.25)}
+.service-list{list-style:none;padding:0;margin-top:14px;display:flex;flex-direction:column;gap:7px}
+.service-list li{font-size:13px;color:var(--muted);padding-left:18px;position:relative;line-height:1.55}
+.service-list li::before{content:'';position:absolute;left:0;top:7px;width:6px;height:6px;border-radius:50%;background:var(--champagne)}
 
 /* PREVIEW */
 .preview{background:var(--bg2);padding:100px 40px}
@@ -149,24 +180,81 @@ nav{position:sticky;top:0;z-index:100;background:rgba(15,28,46,0.97);backdrop-fi
 .browser-bar{display:flex;align-items:center;gap:8px;padding:12px 16px;border-bottom:1px solid rgba(255,255,255,0.08)}
 .bdot{width:10px;height:10px;border-radius:50%}
 .bdot.r{background:#ff5f57}.bdot.y{background:#ffbd2e}.bdot.g{background:#28c840}
-.b-url{flex:1;background:rgba(255,255,255,0.06);border-radius:6px;padding:5px 12px;font-size:11px;color:rgba(255,255,255,0.35);margin-left:12px}
+.b-url{flex:1;background:rgba(255,255,255,0.06);border-radius:6px;padding:5px 12px;font-size:11px;color:rgba(255,255,255,0.35);margin-left:12px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .preview-hero{display:flex;align-items:center;gap:20px;padding:24px 20px;border-bottom:1px solid rgba(255,255,255,0.06)}
-.preview-avatar{width:56px;height:56px;border-radius:50%;border:2px solid var(--gold);overflow:hidden;flex-shrink:0}
-.preview-avatar img{width:100%;height:100%;object-fit:cover}
+.preview-avatar{width:56px;height:56px;border-radius:50%;border:2px solid var(--gold);overflow:hidden;flex-shrink:0;background:linear-gradient(135deg,var(--gold-mid),var(--gold-dark));display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:600;color:#fff;position:relative}
+.preview-avatar::before{content:attr(data-initials);position:absolute}
+.preview-avatar img{position:relative;z-index:1;width:100%;height:100%;object-fit:cover}
 .preview-name{font-size:15px;font-weight:700;color:#fff}
 .preview-role{font-size:12px;color:rgba(255,255,255,0.45);margin-top:2px}
 .preview-rows{padding:16px 20px;display:flex;flex-direction:column;gap:8px}
-.preview-row{background:rgba(255,255,255,0.05);border-radius:8px;padding:12px 16px;display:flex;align-items:center;justify-content:space-between;border:1px solid rgba(255,255,255,0.07)}
-.pr-left{display:flex;align-items:center;gap:10px}
+.preview-row{background:rgba(255,255,255,0.05);border-radius:8px;padding:12px 16px;display:flex;align-items:center;justify-content:space-between;border:1px solid rgba(255,255,255,0.07);gap:8px}
+.pr-left{display:flex;align-items:center;gap:10px;min-width:0}
 .pr-num{width:22px;height:22px;border-radius:5px;background:var(--gold);color:var(--navy);font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.pr-label{font-size:13px;font-weight:600;color:rgba(255,255,255,0.75)}
-.pr-badge{font-size:11px;font-weight:700;padding:3px 10px;border-radius:100px}
+.pr-label{font-size:13px;font-weight:600;color:rgba(255,255,255,0.75);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pr-badge{font-size:11px;font-weight:700;padding:3px 10px;border-radius:100px;flex-shrink:0}
 .pr-badge.gold{background:rgba(245,166,35,0.15);color:var(--gold);border:1px solid rgba(245,166,35,0.3)}
 .pr-badge.green{background:rgba(76,175,125,0.15);color:#4CAF7D;border:1px solid rgba(76,175,125,0.3)}
 .preview-cta{text-align:center;margin-top:8px}
 .preview-cta a{display:inline-flex;align-items:center;gap:8px;padding:12px 28px;background:var(--gold);color:var(--navy);border-radius:12px;font-size:13px;font-weight:700;min-height:44px;box-shadow:0 8px 20px rgba(245,166,35,0.2);transition:transform .18s,opacity .18s}
 .preview-cta a:hover{transform:translateY(-1px);opacity:0.92}
 .preview-cta p{font-size:12px;color:var(--muted);margin-top:10px}
+
+/* ═══ EXECUTIVE SHOWCASE ═══ */
+.exec-showcase{background:var(--noir);padding:100px 40px;color:#fff;position:relative;overflow:hidden;border-top:1px solid var(--champagne-line);border-bottom:1px solid var(--champagne-line)}
+.exec-showcase::before{
+  content:'';position:absolute;
+  top:-200px;left:50%;transform:translateX(-50%);
+  width:1100px;height:900px;
+  background:radial-gradient(ellipse at center,rgba(200,165,82,0.10) 0%,transparent 60%);
+  pointer-events:none;
+}
+.exec-showcase-inner{position:relative;z-index:1;max-width:var(--max);margin:0 auto}
+.exec-showcase-header{text-align:center;margin-bottom:48px}
+.exec-tier-badge{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:100px;background:var(--champagne-tint);border:1px solid var(--champagne-line);font-size:10px;font-weight:700;letter-spacing:2.5px;color:var(--champagne);text-transform:uppercase;margin-bottom:24px}
+.exec-tier-badge::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--champagne)}
+.exec-showcase h2{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(32px,4.5vw,52px);font-weight:600;letter-spacing:-0.02em;line-height:1.12;margin-bottom:18px;color:#fff;text-wrap:balance}
+.exec-showcase h2 .em{color:var(--champagne);font-style:italic}
+.exec-showcase-sub{font-size:17px;color:rgba(255,255,255,0.6);max-width:62ch;margin:0 auto;line-height:1.75}
+
+/* Auto-centering 7-card layout */
+.exec-deliverables{
+  display:flex;flex-wrap:wrap;justify-content:center;
+  gap:14px;margin:48px auto 56px;
+}
+.exec-deliverable{
+  flex:0 0 calc(25% - 11px);
+  min-width:170px;
+  background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);
+  border-radius:12px;padding:22px 18px;text-align:center;
+  transition:border-color .2s,background .2s;
+}
+.exec-deliverable:hover{border-color:var(--champagne-line);background:rgba(200,165,82,0.04)}
+.exec-deliv-icon{width:36px;height:36px;border-radius:9px;background:var(--champagne-tint);border:1px solid var(--champagne-line);display:flex;align-items:center;justify-content:center;margin:0 auto 14px;color:var(--champagne)}
+.exec-deliv-icon svg{width:18px;height:18px}
+.exec-deliv-title{font-size:13px;font-weight:700;color:#fff;margin-bottom:4px;letter-spacing:-0.01em}
+.exec-deliv-sub{font-size:11.5px;color:rgba(255,255,255,0.45);line-height:1.5}
+@media(max-width:920px){.exec-deliverable{flex:0 0 calc(33.333% - 10px)}}
+@media(max-width:640px){.exec-deliverable{flex:0 0 calc(50% - 7px);min-width:0}}
+
+/* Sample card */
+.exec-sample-card{background:rgba(255,255,255,0.03);border:1px solid var(--champagne-line);border-radius:14px;padding:36px 40px;display:grid;grid-template-columns:1.2fr 1fr;gap:36px;align-items:center}
+.exec-sample-card-text .lbl{font-size:10px;font-weight:700;letter-spacing:3px;color:var(--champagne);text-transform:uppercase;margin-bottom:12px}
+.exec-sample-card-text h3{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:600;letter-spacing:-0.01em;line-height:1.2;color:#fff;margin-bottom:14px}
+.exec-sample-card-text p{font-size:15px;color:rgba(255,255,255,0.6);line-height:1.7;margin-bottom:20px}
+.exec-sample-actions{display:flex;gap:12px;flex-wrap:wrap}
+.exec-sample-thumbnail{position:relative;border-radius:10px;overflow:hidden;border:1px solid rgba(255,255,255,0.1);box-shadow:0 18px 40px rgba(0,0,0,0.4);aspect-ratio:4/3;background:linear-gradient(180deg,#fbfaf6,#f4f1e9)}
+.thumb-bar{background:#181c25;padding:8px 12px;display:flex;align-items:center;gap:6px}
+.thumb-dot{width:7px;height:7px;border-radius:50%}
+.thumb-dot.r{background:#ff5f57}.thumb-dot.y{background:#ffbd2e}.thumb-dot.g{background:#28c840}
+.thumb-url{flex:1;font-size:8px;color:rgba(255,255,255,0.35);background:rgba(255,255,255,0.04);border-radius:3px;padding:2px 8px;margin-left:6px;font-family:ui-monospace,monospace;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.thumb-content{padding:24px 20px;text-align:center;color:#1a1d24}
+.thumb-photo{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,#d4c8aa,#a8946a);margin:0 auto 10px;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:15px;font-weight:600;color:#fff;border:2px solid #fff;box-shadow:0 3px 8px rgba(0,0,0,0.1)}
+.thumb-name{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:600;color:#1a1d24;line-height:1.1;margin-bottom:3px}
+.thumb-role{font-size:9px;color:#7a7466;font-weight:500;letter-spacing:0.05em;margin-bottom:10px}
+.thumb-tag{font-family:'Cormorant Garamond',serif;font-size:11px;font-style:italic;color:#5a5447;line-height:1.4;max-width:200px;margin:0 auto}
+.thumb-pills{display:flex;justify-content:center;gap:4px;margin-top:10px;flex-wrap:wrap}
+.thumb-pill{font-size:7px;font-weight:700;letter-spacing:0.5px;padding:2px 6px;border-radius:100px;background:rgba(168,148,106,0.15);color:#a8946a;text-transform:uppercase}
 
 /* TEAM */
 .team{background:var(--bg);padding:100px 40px}
@@ -176,9 +264,18 @@ nav{position:sticky;top:0;z-index:100;background:rgba(15,28,46,0.97);backdrop-fi
 .team-card{background:#fff;border:1px solid var(--card-border);box-shadow:var(--shadow-sm);border-radius:14px;padding:28px;text-align:center;transition:border-color .2s,box-shadow .2s}
 .team-card:hover{border-color:rgba(240,192,110,0.55);box-shadow:var(--shadow-md)}
 .team-card.featured{border-top:3px solid var(--gold);grid-column:1/-1}
-.team-photo{width:80px;height:80px;border-radius:50%;border:3px solid var(--gold);overflow:hidden;margin:0 auto 16px;background:var(--gold-light)}
-.team-photo img{width:100%;height:100%;object-fit:cover}
-.team-photo.large{width:100px;height:100px}
+.team-photo{
+  width:80px;height:80px;border-radius:50%;
+  border:3px solid var(--gold);overflow:hidden;
+  margin:0 auto 16px;
+  background:linear-gradient(135deg,var(--gold-mid),var(--gold-dark));
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:600;color:#fff;
+  position:relative;
+}
+.team-photo::before{content:attr(data-initials);position:absolute}
+.team-photo img{position:relative;z-index:1;width:100%;height:100%;object-fit:cover}
+.team-photo.large{width:100px;height:100px;font-size:30px}
 .team-name{font-size:17px;font-weight:700;color:var(--dark);margin-bottom:4px}
 .team-role{font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
 .team-bio{font-size:14px;color:var(--muted);line-height:1.75}
@@ -195,52 +292,77 @@ nav{position:sticky;top:0;z-index:100;background:rgba(15,28,46,0.97);backdrop-fi
 .step-num{width:56px;height:56px;border-radius:50%;background:var(--gold);color:var(--navy);font-size:20px;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;border:3px solid #fff;box-shadow:0 0 0 2px var(--gold)}
 .process-step h3{font-size:15px;font-weight:700;color:var(--dark);margin-bottom:8px}
 .process-step p{font-size:13px;color:var(--muted);line-height:1.6}
+.process-note{margin-top:32px;text-align:center;font-size:13px;color:var(--muted);font-style:italic}
+.process-note strong{color:var(--champagne-dark);font-style:normal;font-weight:700}
 
 /* PRICING */
 .pricing{background:var(--navy);padding:100px 40px;position:relative;overflow:hidden}
-.pricing::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--gold)}
+.pricing::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold) 0%,var(--gold) 60%,var(--champagne) 60%,var(--champagne) 100%)}
 .pricing-header{text-align:center;margin-bottom:56px}
 .pricing-header .section-label{color:rgba(255,255,255,0.55)}
 .pricing-header h2{color:#fff;font-size:clamp(26px,3.5vw,40px);font-weight:800;letter-spacing:-0.03em;margin-bottom:14px;text-wrap:balance}
 .pricing-header p{font-size:16px;color:rgba(255,255,255,0.55);max-width:560px;margin:0 auto;line-height:1.7}
 .pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:var(--max);margin:0 auto}
-.price-card{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:14px;padding:32px 28px;transition:background .2s}
+.price-card{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:14px;padding:32px 28px;transition:background .2s;display:flex;flex-direction:column}
 .price-card:hover{background:rgba(255,255,255,0.1)}
 .price-card.featured{background:rgba(245,166,35,0.1);border-color:rgba(245,166,35,0.35);border-top:3px solid var(--gold)}
+.price-card.executive{background:linear-gradient(180deg,rgba(200,165,82,0.10),rgba(200,165,82,0.04));border-color:var(--champagne-line);border-top:3px solid var(--champagne)}
 .price-label{font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:10px}
 .price-card.featured .price-label{color:var(--gold)}
-.price-name{font-size:20px;font-weight:800;color:#fff;margin-bottom:6px}
-.price-amount{font-size:32px;font-weight:800;color:var(--gold);line-height:1;margin-bottom:6px}
+.price-card.executive .price-label{color:var(--champagne)}
+.price-name{font-size:20px;font-weight:800;color:#fff;margin-bottom:10px}
+.price-card.executive .price-name{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:600;letter-spacing:-0.01em}
+.price-amount{font-size:32px;font-weight:800;color:var(--gold);line-height:1;margin-bottom:4px}
+.price-card.executive .price-amount{color:var(--champagne)}
+.price-kes{font-size:15px;font-weight:700;color:rgba(255,255,255,0.65);line-height:1;margin-bottom:8px;letter-spacing:0.01em}
+.price-card.executive .price-kes{color:rgba(255,255,255,0.75)}
 .price-note{font-size:12px;color:rgba(255,255,255,0.4);margin-bottom:20px}
 .price-divider{height:1px;background:rgba(255,255,255,0.1);margin-bottom:20px}
-.price-features{display:flex;flex-direction:column;gap:10px;margin-bottom:24px}
+.price-features{display:flex;flex-direction:column;gap:10px;margin-bottom:24px;flex:1}
 .pf{display:flex;gap:10px;align-items:flex-start;font-size:13px;color:rgba(255,255,255,0.65);line-height:1.5}
-.pf-icon{width:16px;height:16px;flex-shrink:0;margin-top:1px;color:var(--gold)}
-.pf-icon svg{width:16px;height:16px}
+.pf::before{content:'●';color:var(--gold);font-size:8px;flex-shrink:0;margin-top:4px}
+.price-card.executive .pf::before{color:var(--champagne)}
 .price-cta{display:flex;width:100%;padding:12px;background:var(--gold);color:var(--navy);border-radius:12px;font-size:13px;font-weight:700;text-align:center;border:none;cursor:pointer;justify-content:center;min-height:44px;align-items:center;transition:transform .18s,opacity .18s;box-shadow:0 8px 20px rgba(245,166,35,0.2)}
 .price-cta:hover{transform:translateY(-1px);opacity:0.92}
-.price-card:not(.featured) .price-cta{background:rgba(255,255,255,0.1);color:#fff;box-shadow:none;border:1px solid rgba(255,255,255,0.2)}
+.price-card:not(.featured):not(.executive) .price-cta{background:rgba(255,255,255,0.1);color:#fff;box-shadow:none;border:1px solid rgba(255,255,255,0.2)}
+.price-card.executive .price-cta{background:var(--champagne);color:var(--noir);box-shadow:0 8px 20px rgba(200,165,82,0.22)}
+
+/* CORPORATE BAND */
+.corporate-band{background:var(--navy);padding:0 40px 80px}
+.corporate-card{max-width:var(--max);margin:0 auto;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:14px;padding:32px 36px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.corporate-card-text .corp-lbl{font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:8px}
+.corporate-card-text h3{font-size:20px;font-weight:700;color:#fff;margin-bottom:6px;letter-spacing:-0.01em}
+.corporate-card-text p{font-size:14px;color:rgba(255,255,255,0.55);max-width:520px;line-height:1.6}
 
 /* TESTIMONIALS */
 .testimonials{background:var(--bg2);padding:100px 40px}
 .testimonials-header{text-align:center;margin-bottom:56px}
 .testimonials-header .section-sub{margin:0 auto}
-.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.testi-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;max-width:880px;margin:0 auto}
 .testi-card{background:#fff;border:1px solid var(--card-border);box-shadow:var(--shadow-sm);border-radius:14px;padding:28px;transition:border-color .2s,box-shadow .2s}
 .testi-card:hover{border-color:rgba(240,192,110,0.55);box-shadow:var(--shadow-md)}
-.testi-avatar{width:48px;height:48px;border-radius:50%;border:2px solid var(--gold);overflow:hidden;margin-bottom:14px;background:var(--gold-light)}
-.testi-avatar img{width:100%;height:100%;object-fit:cover}
+.testi-avatar{
+  width:48px;height:48px;border-radius:50%;
+  border:2px solid var(--gold);overflow:hidden;
+  margin-bottom:14px;
+  background:linear-gradient(135deg,var(--gold-mid),var(--gold-dark));
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:600;color:#fff;
+  position:relative;
+}
+.testi-avatar::before{content:attr(data-initials);position:absolute}
+.testi-avatar img{position:relative;z-index:1;width:100%;height:100%;object-fit:cover}
 .testi-quote{font-size:14px;color:var(--muted);line-height:1.75;font-style:italic;margin-bottom:16px}
 .testi-name{font-size:13px;font-weight:700;color:var(--dark)}
 .testi-title{font-size:12px;color:var(--muted)}
 .testi-company{font-size:11px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
 
 /* FRACTIONAL BAND */
-.fractional-band{background:var(--gold);padding:72px 40px;text-align:center;position:relative;overflow:hidden}
-.fractional-band::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 30% 50%,rgba(15,28,46,0.08),transparent 60%)}
+.fractional-band{background:var(--gold-light);padding:72px 40px;text-align:center;position:relative;overflow:hidden;border-top:3px solid var(--gold-mid);border-bottom:3px solid var(--gold-mid)}
+.fractional-band::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 30% 50%,rgba(15,28,46,0.04),transparent 60%)}
 .fractional-band-inner{position:relative;z-index:2;max-width:680px;margin:0 auto}
 .fractional-band h2{font-size:clamp(24px,3vw,36px);font-weight:800;color:var(--navy);letter-spacing:-0.02em;margin-bottom:12px;text-wrap:balance}
-.fractional-band p{font-size:16px;color:rgba(15,28,46,0.7);margin-bottom:28px;line-height:1.7}
+.fractional-band p{font-size:16px;color:var(--muted);margin-bottom:28px;line-height:1.7}
 .fractional-band .btn-navy{box-shadow:0 8px 24px rgba(15,28,46,0.15)}
 
 /* CONTACT */
@@ -274,23 +396,37 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,0.07);paddin
 .footer-links a:hover{color:var(--gold)}
 .footer-copy{font-size:12px;color:rgba(255,255,255,0.25)}
 
-/* WHY ICONS */
-.why-icon{width:22px;height:22px;display:flex;align-items:center;justify-content:center;color:var(--gold);flex-shrink:0;margin-top:2px}
-.why-icon svg{width:22px;height:22px}
+/* TABLET */
+@media(max-width:980px){
+  .nav-right .nav-link:not(.nav-link-keep){display:none}
+}
 
+/* MOBILE */
 @media(max-width:768px){
-  nav{padding:0 20px}
-  .nav-right .nav-link,.nav-right .nav-cta{display:none}
+  nav{padding:0 18px}
+  .nav-right .nav-link,.nav-right .nav-cta,.nav-right .nav-fractional{display:none}
   .nav-hamburger{display:flex}
   .hero{padding:80px 20px 64px}
-  .stats-band,.problem,.services,.preview,.team,.process,.pricing,.testimonials,.fractional-band,.contact{padding:72px 20px}
-  .stats-grid,.services-grid,.team-grid,.process-steps,.pricing-grid,.testi-grid{grid-template-columns:1fr}
+  .stats-band,.problem,.services,.preview,.exec-showcase,.team,.process,.pricing,.testimonials,.fractional-band,.contact{padding:72px 18px}
+  .corporate-band{padding:0 18px 60px}
+  .stats-grid{grid-template-columns:repeat(2,1fr);gap:24px}
+  .services-grid,.team-grid,.process-steps,.pricing-grid,.testi-grid{grid-template-columns:1fr}
+  .exec-sample-card{grid-template-columns:1fr;padding:28px 22px;gap:24px}
+  .corporate-card{padding:24px;flex-direction:column;text-align:center;align-items:flex-start}
+  .corporate-card-text{text-align:left;width:100%}
   .process-steps::before{display:none}
   .team-card.featured{grid-column:auto}
   .team-featured-inner{grid-template-columns:1fr;text-align:center}
   .form-grid{grid-template-columns:1fr}
-  footer{padding:32px 20px}
+  footer{padding:32px 18px}
   .footer-inner{flex-direction:column;text-align:center}
+  .price-amount{font-size:28px}
+  .price-kes{font-size:14px}
+  .browser-bar{padding:10px 12px}
+  .b-url{font-size:10px}
+  .preview-row{padding:11px 14px}
+  .pr-label{font-size:12px}
+  .pr-badge{font-size:10px;padding:2px 8px}
 }
 </style>
 </head>
@@ -299,14 +435,15 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,0.07);paddin
 
 <nav>
   <a href="/" class="nav-logo">
-    <img src="images/logo.png" alt="Golden Pipit Careers"/>
+    <img src="images/logo.png" alt="Golden Pipit Careers" onerror="this.style.display='none'"/>
     <div class="nav-logo-text">GP Careers<span>Land Well.</span></div>
   </a>
   <div class="nav-right">
     <a href="#services" class="nav-link">Services</a>
+    <a href="#executive" class="nav-link">Executive</a>
     <a href="#pricing" class="nav-link">Pricing</a>
     <a href="#contact" class="nav-link">Contact</a>
-    <a href="https://gpfractional.com" target="_blank" rel="noopener noreferrer" class="nav-link">Fractional ✦</a>
+    <a href="https://gpfractional.com" target="_blank" rel="noopener noreferrer" class="nav-fractional">Fractional <span class="star">✦</span></a>
     <a href="#contact" class="nav-cta">Get Started →</a>
     <button class="nav-hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-drawer" onclick="toggleNav(this)">
       <span></span><span></span><span></span>
@@ -315,9 +452,10 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,0.07);paddin
 </nav>
 <div class="nav-drawer" id="nav-drawer" role="navigation">
   <a href="#services">Services</a>
+  <a href="#executive">Executive</a>
   <a href="#pricing">Pricing</a>
   <a href="#contact">Contact</a>
-  <a href="https://gpfractional.com" target="_blank" rel="noopener noreferrer">Fractional ✦</a>
+  <a href="https://gpfractional.com" target="_blank" rel="noopener noreferrer" class="drawer-fractional">Fractional <span class="star">✦</span> — going independent?</a>
   <a href="#contact">Get Started →</a>
 </div>
 
@@ -329,7 +467,7 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,0.07);paddin
   <div class="hero-inner">
     <div class="shift-happens">Shift happens.</div>
     <h1 class="hero-headline">Your next chapter deserves a<br/><span>great first impression.</span></h1>
-    <p>Most professionals are far better than their LinkedIn profile or CV suggests. We fix that — for individuals in transition and organisations supporting them.</p>
+    <p>Most professionals are far better than their LinkedIn profile or CV suggests. We fix that — for individuals in transition, senior leaders building presence, and organisations supporting both.</p>
     <div class="hero-ctas">
       <a href="#pricing" class="btn-gold">See packages →</a>
       <a href="#contact" class="btn-ghost">Get in touch</a>
@@ -360,37 +498,33 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,0.07);paddin
   <div class="container pad">
     <div class="services-header">
       <div class="section-label">What we do</div>
-      <h2 class="section-title">Three services. One complete package.</h2>
-      <p class="section-sub">Everything you need to walk into your next opportunity with confidence.</p>
+      <h2 class="section-title">Three services. Three packages.</h2>
+      <p class="section-sub">From a single CV refresh to a full executive presence build — every level of seniority, every level of ambition.</p>
     </div>
     <div class="services-grid">
       <div class="service-card featured">
-        <div class="service-badge gold">Most Requested</div>
-        <div class="service-icon"><i data-lucide="linkedin"></i></div>
-        <h3>LinkedIn Profile Refresh</h3>
-        <p>We rewrite your headline, About section, and experience entries to position you compellingly — not just accurately. Your profile becomes a magnet, not a record.</p>
-      </div>
-      <div class="service-card featured">
-        <div class="service-badge gold">High Impact</div>
+        <div class="service-badge gold">Entry</div>
         <div class="service-icon"><i data-lucide="file-text"></i></div>
-        <h3>CV &amp; Résumé Rewrite</h3>
+        <h3>CV Rewrite</h3>
         <p>We transform your CV from a list of responsibilities into a narrative of impact. Clean formatting, strong language, and a structure that makes recruiters keep reading.</p>
       </div>
       <div class="service-card featured">
-        <div class="service-badge navy">Included in Full Package</div>
-        <div class="service-icon"><i data-lucide="message-square"></i></div>
-        <h3>Personal Narrative Coaching</h3>
-        <p>How do you talk about your transition? We develop a clear, confident story about where you've been, what you offer, and where you're headed.</p>
+        <div class="service-badge gold">Most Popular</div>
+        <div class="service-icon"><i data-lucide="linkedin"></i></div>
+        <h3>CV + LinkedIn Rebuild</h3>
+        <p>Everything in the CV rewrite, plus a full LinkedIn rebuild — headline, About, every experience entry, skills strategy. One coherent story across both touchpoints.</p>
       </div>
-    </div>
-    <div class="service-delivery">
-      <h3>Premium Digital Delivery — included in all plans</h3>
-      <p>Your CV and LinkedIn profile are delivered as a clean, shareable digital report — effortless to send to recruiters, download as a PDF, or share as a private link.</p>
-      <div class="delivery-pills">
-        <span class="dpill">Shareable personal link</span>
-        <span class="dpill">One-click PDF download</span>
-        <span class="dpill">Mobile-friendly</span>
-        <span class="dpill">Recruiter-ready</span>
+      <div class="service-card executive">
+        <div class="service-badge champagne">Flagship · Executive Tier</div>
+        <div class="service-icon champagne"><i data-lucide="award"></i></div>
+        <h3>Executive Presence Package</h3>
+        <p>For senior professionals who need more than a polished CV — they need a presence. A cohesive personal brand across every touchpoint, plus active introductions to the rooms you want to be in.</p>
+        <ul class="service-list">
+          <li>Executive-register CV &amp; LinkedIn rebuild</li>
+          <li>Third-person executive bio &amp; personal website</li>
+          <li>Targeted outreach to 10–15 companies</li>
+          <li>Featured on the Golden Pipit Network</li>
+        </ul>
       </div>
     </div>
   </div>
@@ -410,13 +544,16 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,0.07);paddin
           <div class="b-url">goldenpipitcareers.com / your-profile-report</div>
         </div>
         <div class="preview-hero">
-          <div class="preview-avatar"><img src="https://fnk42.github.io/maureen-wanja-optimisation/images/maureen.jpg" alt="Sample profile"/></div>
+          <div class="preview-avatar" data-initials="MK"><img src="images/test_image.jpg" alt="Sample profile" onerror="this.style.display='none'"/></div>
           <div><div class="preview-name">Mary Wanjiru Kamau</div><div class="preview-role">Executive Assistant — LinkedIn Optimisation Report</div></div>
         </div>
         <div class="preview-rows">
           <div class="preview-row"><div class="pr-left"><div class="pr-num">01</div><div class="pr-label">LinkedIn Headline</div></div><div class="pr-badge gold">Optimised</div></div>
           <div class="preview-row"><div class="pr-left"><div class="pr-num">02</div><div class="pr-label">About / Summary</div></div><div class="pr-badge gold">Optimised</div></div>
-          <div class="preview-row"><div class="pr-left"><div class="pr-num">03–06</div><div class="pr-label">Experience — 4 roles fully rewritten</div></div><div class="pr-badge gold">Optimised</div></div>
+          <div class="preview-row"><div class="pr-left"><div class="pr-num">03</div><div class="pr-label">Experience — Role 1</div></div><div class="pr-badge gold">Optimised</div></div>
+          <div class="preview-row"><div class="pr-left"><div class="pr-num">04</div><div class="pr-label">Experience — Role 2</div></div><div class="pr-badge gold">Optimised</div></div>
+          <div class="preview-row"><div class="pr-left"><div class="pr-num">05</div><div class="pr-label">Experience — Role 3</div></div><div class="pr-badge gold">Optimised</div></div>
+          <div class="preview-row"><div class="pr-left"><div class="pr-num">06</div><div class="pr-label">Experience — Role 4</div></div><div class="pr-badge gold">Optimised</div></div>
           <div class="preview-row"><div class="pr-left"><div class="pr-num">07</div><div class="pr-label">Skills — pinned &amp; prioritised</div></div><div class="pr-badge green">Ready to pin</div></div>
           <div class="preview-row"><div class="pr-left"><div class="pr-num">08</div><div class="pr-label">CV — Executive version</div></div><div class="pr-badge green">Download ready</div></div>
         </div>
@@ -424,7 +561,86 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,0.07);paddin
     </div>
     <div class="preview-cta">
       <a href="https://fnk42.github.io/maureen-wanja-optimisation" target="_blank" rel="noopener noreferrer">See a live example report →</a>
-      <p>A real report — anonymised for privacy.</p>
+      <p>A real LinkedIn / CV report — anonymised for privacy.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ EXECUTIVE SHOWCASE ═══ -->
+<section class="exec-showcase" id="executive">
+  <div class="exec-showcase-inner">
+    <div class="exec-showcase-header">
+      <div class="exec-tier-badge">Executive Presence Tier</div>
+      <h2>For senior professionals who need a <span class="em">presence</span>, not a profile.</h2>
+      <p class="exec-showcase-sub">Most executives are under-represented online relative to their actual track record. The Executive Presence Package closes that gap — seven distinct deliverables, ten business days, one cohesive presence.</p>
+    </div>
+
+    <div class="exec-deliverables">
+      <div class="exec-deliverable">
+        <div class="exec-deliv-icon"><i data-lucide="linkedin"></i></div>
+        <div class="exec-deliv-title">LinkedIn — fully rewritten</div>
+        <div class="exec-deliv-sub">Headline, About, every experience entry, skills strategy.</div>
+      </div>
+      <div class="exec-deliverable">
+        <div class="exec-deliv-icon"><i data-lucide="file-text"></i></div>
+        <div class="exec-deliv-title">Executive CV</div>
+        <div class="exec-deliv-sub">Board-register, two pages, designed for chairs and committees.</div>
+      </div>
+      <div class="exec-deliverable">
+        <div class="exec-deliv-icon"><i data-lucide="book-open"></i></div>
+        <div class="exec-deliv-title">Executive Bio</div>
+        <div class="exec-deliv-sub">Third-person, board-ready, for speaking and press.</div>
+      </div>
+      <div class="exec-deliverable">
+        <div class="exec-deliv-icon"><i data-lucide="globe"></i></div>
+        <div class="exec-deliv-title">Personal Website</div>
+        <div class="exec-deliv-sub">One-page custom site on a private subdomain.</div>
+      </div>
+      <div class="exec-deliverable">
+        <div class="exec-deliv-icon"><i data-lucide="mic"></i></div>
+        <div class="exec-deliv-title">Narrative Coaching</div>
+        <div class="exec-deliv-sub">The story, positioning, and language across every asset.</div>
+      </div>
+      <div class="exec-deliverable">
+        <div class="exec-deliv-icon"><i data-lucide="target"></i></div>
+        <div class="exec-deliv-title">Targeted Outreach</div>
+        <div class="exec-deliv-sub">Warm approaches to 10–15 matched companies in your first 60 days.</div>
+      </div>
+      <div class="exec-deliverable">
+        <div class="exec-deliv-icon"><i data-lucide="users"></i></div>
+        <div class="exec-deliv-title">Golden Pipit Network</div>
+        <div class="exec-deliv-sub">Your profile featured on the network we use for retained search clients.</div>
+      </div>
+    </div>
+
+    <div class="exec-sample-card">
+      <div class="exec-sample-card-text">
+        <div class="lbl">See it in action</div>
+        <h3>The Catherine M. sample report.</h3>
+        <p>An anonymised, end-to-end Executive Presence report — exactly what every executive client receives. Every deliverable rendered, every section explained, every rationale shown.</p>
+        <div class="exec-sample-actions">
+          <a href="https://fnk42.github.io/Gpcareers-executive-sample/" target="_blank" rel="noopener noreferrer" class="btn-champagne">View the sample report →</a>
+          <a href="#pricing" class="btn-noir">See pricing</a>
+        </div>
+      </div>
+      <div class="exec-sample-thumbnail">
+        <div class="thumb-bar">
+          <div class="thumb-dot r"></div><div class="thumb-dot y"></div><div class="thumb-dot g"></div>
+          <div class="thumb-url">executive-sample.goldenpipitcareers.com</div>
+        </div>
+        <div class="thumb-content">
+          <div class="thumb-photo">CM</div>
+          <div class="thumb-name">Catherine M.</div>
+          <div class="thumb-role">CHIEF OPERATING OFFICER</div>
+          <div class="thumb-tag">"Eighteen years building operations for institutions investing into Africa."</div>
+          <div class="thumb-pills">
+            <span class="thumb-pill">LinkedIn</span>
+            <span class="thumb-pill">CV</span>
+            <span class="thumb-pill">Bio</span>
+            <span class="thumb-pill">Website</span>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -440,7 +656,7 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,0.07);paddin
       <div class="team-card featured">
         <div class="team-featured-inner">
           <div>
-            <div class="team-photo large"><img src="images/njenga.jpg" alt="Njenga Koimburi"/></div>
+            <div class="team-photo large" data-initials="NK"><img src="images/njenga.jpg" alt="Njenga Koimburi" onerror="this.style.display='none'"/></div>
           </div>
           <div>
             <div class="team-role">Founder &amp; Lead Talent Strategist</div>
@@ -450,13 +666,13 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,0.07);paddin
         </div>
       </div>
       <div class="team-card">
-        <div class="team-photo"><img src="images/joey.jpg" alt="Joseph Wambugu"/></div>
+        <div class="team-photo" data-initials="JW"><img src="images/joey.jpg" alt="Joseph Wambugu" onerror="this.style.display='none'"/></div>
         <div class="team-role">Junior Recruiter</div>
         <div class="team-name">Joseph Wambugu</div>
         <div class="team-bio" style="margin-top:10px">Joey brings energy and precision to every candidate he works with. With hands-on experience reviewing applications and coordinating interviews, he knows what gets a CV noticed — and what gets it filtered out.</div>
       </div>
       <div class="team-card">
-        <div class="team-photo"><img src="images/dickson.jpg" alt="Dickson Zaqueu"/></div>
+        <div class="team-photo" data-initials="DZ"><img src="images/dickson.jpg" alt="Dickson Zaqueu" onerror="this.style.display='none'"/></div>
         <div class="team-role">Junior Recruiter</div>
         <div class="team-name">Dickson Zaqueu</div>
         <div class="team-bio" style="margin-top:10px">Dickson combines a sharp eye for detail with a genuine investment in candidate outcomes. He understands the full journey a profile takes from submission to shortlist — and builds materials accordingly.</div>
@@ -476,6 +692,7 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,0.07);paddin
       <div class="process-step"><div class="step-num">2</div><h3>We Write</h3><p>Our team rewrites your LinkedIn and CV from scratch — drawing on what we know about what hiring managers actually respond to.</p></div>
       <div class="process-step"><div class="step-num">3</div><h3>Review &amp; Launch</h3><p>You review, we refine. Once you're happy, your new materials are ready to go. We're available for questions after.</p></div>
     </div>
+    <p class="process-note"><strong>Executive Presence track:</strong> 10 business days · three rounds of revisions · dedicated delivery call.</p>
   </div>
 </section>
 
@@ -488,49 +705,67 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,0.07);paddin
     </div>
     <div class="pricing-grid">
       <div class="price-card">
-        <div class="price-label">Essential</div>
-        <div class="price-name">LinkedIn Only</div>
-        <div class="price-amount">$149</div>
+        <div class="price-label">Entry</div>
+        <div class="price-name">CV Rewrite</div>
+        <div class="price-amount">$99</div>
+        <div class="price-kes">KES 12,900</div>
         <div class="price-note">One-time · Delivered in 5 days</div>
         <div class="price-divider"></div>
         <div class="price-features">
-          <div class="pf"><div class="pf-icon"><i data-lucide="check"></i></div>Full LinkedIn rewrite</div>
-          <div class="pf"><div class="pf-icon"><i data-lucide="check"></i></div>Headline, About, Experience</div>
-          <div class="pf"><div class="pf-icon"><i data-lucide="check"></i></div>Skills &amp; endorsement strategy</div>
-          <div class="pf"><div class="pf-icon"><i data-lucide="check"></i></div>Premium digital report</div>
+          <div class="pf">Full CV rewrite</div>
+          <div class="pf">Impact-led structure &amp; language</div>
+          <div class="pf">ATS-optimised formatting</div>
+          <div class="pf">Premium digital report</div>
         </div>
-        <a href="mailto:info@goldenpipitrecruiting.com" class="price-cta">Get started →</a>
+        <a href="mailto:info@goldenpipitrecruiting.com?subject=GP%20Careers%20%E2%80%94%20CV%20Rewrite" class="price-cta">Get started →</a>
       </div>
       <div class="price-card featured">
         <div class="price-label">Most Popular</div>
-        <div class="price-name">Full Package</div>
-        <div class="price-amount">$299</div>
+        <div class="price-name">CV + LinkedIn</div>
+        <div class="price-amount">$120</div>
+        <div class="price-kes">KES 15,600</div>
         <div class="price-note">One-time · Delivered in 7 days</div>
         <div class="price-divider"></div>
         <div class="price-features">
-          <div class="pf"><div class="pf-icon"><i data-lucide="check"></i></div>Everything in LinkedIn Only</div>
-          <div class="pf"><div class="pf-icon"><i data-lucide="check"></i></div>Full CV / résumé rewrite</div>
-          <div class="pf"><div class="pf-icon"><i data-lucide="check"></i></div>Personal narrative coaching</div>
-          <div class="pf"><div class="pf-icon"><i data-lucide="check"></i></div>Two rounds of revisions</div>
-          <div class="pf"><div class="pf-icon"><i data-lucide="check"></i></div>Premium digital report</div>
+          <div class="pf">Everything in the CV Rewrite</div>
+          <div class="pf">Full LinkedIn rebuild</div>
+          <div class="pf">Headline, About, Experience, Skills</div>
+          <div class="pf">Two rounds of revisions</div>
+          <div class="pf">Premium digital report</div>
         </div>
-        <a href="mailto:info@goldenpipitrecruiting.com" class="price-cta">Get started →</a>
+        <a href="mailto:info@goldenpipitrecruiting.com?subject=GP%20Careers%20%E2%80%94%20CV%20%2B%20LinkedIn" class="price-cta">Get started →</a>
       </div>
-      <div class="price-card">
-        <div class="price-label">Corporate</div>
-        <div class="price-name">Team Package</div>
-        <div class="price-amount">Custom</div>
-        <div class="price-note">For organisations supporting transitions</div>
+      <div class="price-card executive">
+        <div class="price-label">Flagship · Executive Tier</div>
+        <div class="price-name">Executive Presence</div>
+        <div class="price-amount">$750</div>
+        <div class="price-kes">KES 97,500</div>
+        <div class="price-note">40% deposit · Delivered in 10 days</div>
         <div class="price-divider"></div>
         <div class="price-features">
-          <div class="pf"><div class="pf-icon"><i data-lucide="check"></i></div>Full packages for multiple people</div>
-          <div class="pf"><div class="pf-icon"><i data-lucide="check"></i></div>Volume pricing available</div>
-          <div class="pf"><div class="pf-icon"><i data-lucide="check"></i></div>Dedicated account manager</div>
-          <div class="pf"><div class="pf-icon"><i data-lucide="check"></i></div>Priority turnaround</div>
+          <div class="pf">Everything in CV + LinkedIn</div>
+          <div class="pf">Executive-register CV (board-ready)</div>
+          <div class="pf">Third-person executive bio</div>
+          <div class="pf">Custom one-page personal website</div>
+          <div class="pf">Personal narrative coaching</div>
+          <div class="pf">Outreach to 10–15 companies (60 days)</div>
+          <div class="pf">Featured on the Golden Pipit Network</div>
+          <div class="pf">Three rounds of revisions</div>
         </div>
-        <a href="mailto:info@goldenpipitrecruiting.com" class="price-cta">Talk to us →</a>
+        <a href="mailto:info@goldenpipitrecruiting.com?subject=GP%20Careers%20%E2%80%94%20Executive%20Presence%20Package" class="price-cta">Start a conversation →</a>
       </div>
     </div>
+  </div>
+</section>
+
+<section class="corporate-band">
+  <div class="corporate-card">
+    <div class="corporate-card-text">
+      <div class="corp-lbl">For organisations</div>
+      <h3>Team &amp; Corporate Packages</h3>
+      <p>Supporting a team in transition? Onboarding senior hires? We deliver volume packages with priority turnaround and a dedicated account manager.</p>
+    </div>
+    <a href="mailto:info@goldenpipitrecruiting.com?subject=GP%20Careers%20%E2%80%94%20Team%20Package" class="btn-gold">Talk to us →</a>
   </div>
 </section>
 
@@ -542,22 +777,29 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,0.07);paddin
     </div>
     <div class="testi-grid">
       <div class="testi-card">
-        <div class="testi-company">Gratia</div>
-        <div class="testi-avatar"><img src="images/norbert.jpg" alt="Norbert Pap"/></div>
-        <div class="testi-quote">"The quality of candidates GP Recruiting surfaces is consistently above what we find through any other channel. They understand the calibre of person we need."</div>
-        <div class="testi-name">Norbert Pap</div>
-        <div class="testi-title">CEO · Gratia</div>
+        <div class="testi-company">CV Rewrite</div>
+        <div class="testi-avatar" data-initials="BO"><img src="images/beth.jpg" alt="Beth O." onerror="this.style.display='none'"/></div>
+        <div class="testi-quote">"I came to Golden Pipit Careers at a point where I knew my profile wasn't doing me justice — but I didn't know how to fix it. The team worked through my CV and LinkedIn with me, identifying exactly what needed to change and how to frame my experience more compellingly. Within eight weeks of making those changes, I had reached the final stage of two separate interviews. The difference was night and day."</div>
+        <div class="testi-name">Beth O.</div>
+        <div class="testi-title">Project Manager · Nairobi</div>
       </div>
       <div class="testi-card">
-        <div class="testi-company">Arcwise</div>
-        <div class="testi-avatar"><img src="images/brandon.jpg" alt="Brandon Kronitz"/></div>
-        <div class="testi-quote">"Fast, thorough, and genuinely invested in the outcome. GPR doesn't just fill roles — they find people who fit."</div>
-        <div class="testi-name">Brandon Kronitz</div>
-        <div class="testi-title">Co-founder · Arcwise</div>
+        <div class="testi-company">Repositioning &amp; Pivot</div>
+        <div class="testi-avatar" data-initials="EN"><img src="images/edwin.jpg" alt="Edwin N." onerror="this.style.display='none'"/></div>
+        <div class="testi-quote">"After a decade building clean energy ventures across East Africa, I made the decision to take my expertise independent — moving from employment into fractional consulting. GP Careers helped me reposition my profile to reflect that pivot: my LinkedIn now leads with what I bring to the table as a consultant, not just what I've done as an employee. Since relaunching my profile, I've had three inbound approaches from organisations looking for exactly the kind of senior energy expertise I offer."</div>
+        <div class="testi-name">Edwin N.</div>
+        <div class="testi-title">Independent Energy Consultant · East Africa</div>
       </div>
       <div class="testi-card">
-        <div class="testi-company">ThirdWay Partners</div>
-        <div class="testi-avatar"><img src="images/ian.jpg" alt="Ian Krohn"/></div>
+        <div class="testi-company">Career Re-entry</div>
+        <div class="testi-avatar" data-initials="CW"><img src="images/crystal.jpg" alt="Crystal W." onerror="this.style.display='none'"/></div>
+        <div class="testi-quote">"After several years out of the job market, I knew I was ready to return — but I wasn't sure how to position myself or how to advocate for myself in the conversations that followed. Golden Pipit Careers walked me through the entire process: how to frame the gap, how to talk about my experience with confidence, and how to think clearly about compensation. I came away with a much sharper sense of what I bring to the table and how to ask for it. That clarity was worth the engagement."</div>
+        <div class="testi-name">Crystal W.</div>
+        <div class="testi-title">Returning Professional · Nairobi</div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-company">Employer · ThirdWay Partners</div>
+        <div class="testi-avatar" data-initials="IK"><img src="images/ian.jpg" alt="Ian Krohn" onerror="this.style.display='none'"/></div>
         <div class="testi-quote">"Felix was instrumental in helping one of our portfolio companies break into the East African market, identifying key talent hubs and leveraging digital platforms. I highly recommend him."</div>
         <div class="testi-name">Ian Krohn</div>
         <div class="testi-title">Partner · ThirdWay Partners</div>
@@ -569,9 +811,10 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,0.07);paddin
 <div class="fractional-band" id="fractional">
   <div class="fractional-band-inner">
     <div class="section-label" style="color:rgba(15,28,46,0.5)">Also from Golden Pipit</div>
-    <h2>Senior expertise, on your terms.</h2>
-    <p>GP Fractional connects organisations with vetted senior professionals — CFOs, COOs, strategists, and advisors — on a flexible, part-time basis.</p>
-    <a href="https://gpfractional.com" target="_blank" rel="noopener noreferrer" class="btn-navy">Explore GP Fractional →</a>
+    <h2>Ever considered going fractional?</h2>
+    <p>Over the past several years, we have worked with fractional consultants both regionally and internationally — supporting professionals from Kenya, South Africa, Brazil, Indonesia, and Canada in making the transition from full-time employment to independent consulting. For most, that journey began with a profile rewrite: a repositioned LinkedIn, a sharper CV, and a clearer narrative about what they bring to the table as an independent practitioner. From there, we have leveraged our network of strategic partners to help them land their first — and subsequent — engagements. Every one of them is now consulting internationally.</p>
+    <p style="margin-top:16px;margin-bottom:28px">Our track record speaks for itself. If you are a senior professional exploring what independence could look like, reach out. We would love to have a conversation.</p>
+    <a href="https://gpfractional.com" target="_blank" rel="noopener noreferrer" class="btn-navy">Talk to us →</a>
   </div>
 </div>
 
@@ -591,9 +834,10 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,0.07);paddin
           <label for="c-service">Service interested in</label>
           <select id="c-service" name="service">
             <option value="">Select a service</option>
-            <option>LinkedIn Only — $149</option>
-            <option>Full Package — $299</option>
-            <option>Team Package — Custom</option>
+            <option>CV Rewrite — $99 / KES 12,900</option>
+            <option>CV + LinkedIn — $120 / KES 15,600</option>
+            <option>Executive Presence — $750 / KES 97,500</option>
+            <option>Team / Corporate — Custom</option>
           </select>
         </div>
         <div class="form-row"><label for="c-message">Tell us about your situation</label><textarea id="c-message" name="message" placeholder="Current role, what you're looking for, timeline..."></textarea></div>
@@ -619,6 +863,7 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,0.07);paddin
     </div>
     <div class="footer-links">
       <a href="#services">Services</a>
+      <a href="#executive">Executive</a>
       <a href="#pricing">Pricing</a>
       <a href="https://goldenpipitrecruiting.com" target="_blank" rel="noopener noreferrer">GP Recruiting</a>
       <a href="https://gpfractional.com" target="_blank" rel="noopener noreferrer">GP Fractional</a>
@@ -652,7 +897,7 @@ function showSuccess(){
   document.getElementById('contact-form-wrap').style.display='none';
   document.getElementById('form-success').style.display='block';
 }
-if(window.lucide){lucide.createIcons();}
+if(window.lucide) lucide.createIcons();
 </script>
 </body>
 </html>
