@@ -381,10 +381,51 @@ nav{position:sticky;top:0;z-index:100;background:rgba(15,28,46,0.97);backdrop-fi
 .form-submit{width:100%;padding:14px;background:var(--gold);color:var(--navy);border:none;border-radius:12px;font-size:14px;font-weight:700;cursor:pointer;min-height:44px;box-shadow:0 10px 24px rgba(245,166,35,0.18);transition:transform .18s,opacity .18s;margin-top:4px}
 .form-submit:hover{transform:translateY(-1px);opacity:0.92}
 .form-note{font-size:11px;color:var(--muted);margin-top:12px;text-align:center}
-.form-success{display:none;padding:32px;text-align:center}
-.form-success .s-icon{font-size:40px;margin-bottom:16px}
-.form-success h3{font-size:20px;font-weight:700;color:var(--dark);margin-bottom:8px}
-.form-success p{font-size:14px;color:var(--muted);line-height:1.7}
+.form-success{display:none;padding:48px 32px;text-align:center}
+.form-success .s-icon{
+  width:56px;height:56px;border-radius:50%;
+  background:linear-gradient(135deg,var(--champagne),var(--champagne-dark));
+  margin:0 auto 22px;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 8px 24px rgba(200,165,82,0.28);
+}
+.form-success .s-icon svg{width:24px;height:24px;stroke:#fff;stroke-width:2.6}
+.form-success h3{
+  font-family:'Cormorant Garamond',Georgia,serif;
+  font-size:26px;font-weight:600;color:var(--dark);
+  letter-spacing:-0.01em;line-height:1.2;
+  margin-bottom:12px;
+}
+.form-success > p{
+  font-size:15px;color:var(--muted);
+  line-height:1.75;max-width:380px;
+  margin:0 auto 24px;
+}
+.form-success-cta{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:11px 22px;
+  background:transparent;color:var(--champagne-dark);
+  border:1px solid var(--champagne-line);
+  border-radius:10px;
+  font-size:13px;font-weight:700;
+  transition:background .2s,border-color .2s,transform .15s;
+}
+.form-success-cta:hover{
+  background:var(--champagne-tint);
+  border-color:var(--champagne);
+  transform:translateY(-1px);
+}
+.form-success-divider{
+  width:40px;height:1px;
+  background:var(--border);
+  margin:24px auto;
+}
+.form-success-foot{
+  font-size:12px;color:var(--muted);
+  letter-spacing:0.02em;
+}
+.form-success-foot a{color:var(--gold-dark);font-weight:600;text-decoration:none}
+.form-success-foot a:hover{text-decoration:underline}
 
 /* FOOTER */
 footer{background:var(--navy);border-top:1px solid rgba(255,255,255,0.07);padding:40px}
@@ -717,7 +758,7 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,0.07);paddin
           <div class="pf">ATS-optimised formatting</div>
           <div class="pf">Premium digital report</div>
         </div>
-        <a href="mailto:info@goldenpipitrecruiting.com?subject=GP%20Careers%20%E2%80%94%20CV%20Rewrite" class="price-cta">Get started →</a>
+        <a href="mailto:info@goldenpipitrecruiting.com?subject=GP%20Careers%20%E2%80%94%20CV%20Rewrite%20enquiry&amp;body=Hi%20Golden%20Pipit%20Careers%20team%2C%0A%0AI%27d%20like%20to%20learn%20more%20about%20the%20CV%20Rewrite%20package.%20Here%27s%20a%20bit%20about%20my%20situation%3A%0A%0A%E2%80%94%20Current%20role%3A%0A%E2%80%94%20What%20I%27m%20looking%20for%3A%0A%E2%80%94%20Timeline%3A%0A%0AThanks%2C%0A" class="price-cta">Get started →</a>
       </div>
       <div class="price-card featured">
         <div class="price-label">Most Popular</div>
@@ -733,7 +774,7 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,0.07);paddin
           <div class="pf">Two rounds of revisions</div>
           <div class="pf">Premium digital report</div>
         </div>
-        <a href="mailto:info@goldenpipitrecruiting.com?subject=GP%20Careers%20%E2%80%94%20CV%20%2B%20LinkedIn" class="price-cta">Get started →</a>
+        <a href="mailto:info@goldenpipitrecruiting.com?subject=GP%20Careers%20%E2%80%94%20CV%20%2B%20LinkedIn%20enquiry&amp;body=Hi%20Golden%20Pipit%20Careers%20team%2C%0A%0AI%27d%20like%20to%20learn%20more%20about%20the%20CV%20%2B%20LinkedIn%20package.%20Here%27s%20a%20bit%20about%20my%20situation%3A%0A%0A%E2%80%94%20Current%20role%3A%0A%E2%80%94%20What%20I%27m%20looking%20for%3A%0A%E2%80%94%20Timeline%3A%0A%0AThanks%2C%0A" class="price-cta">Get started →</a>
       </div>
       <div class="price-card executive">
         <div class="price-label">Flagship · Executive Tier</div>
@@ -752,7 +793,7 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,0.07);paddin
           <div class="pf">Featured on the Golden Pipit Network</div>
           <div class="pf">Three rounds of revisions</div>
         </div>
-        <a href="mailto:info@goldenpipitrecruiting.com?subject=GP%20Careers%20%E2%80%94%20Executive%20Presence%20Package" class="price-cta">Start a conversation →</a>
+        <a href="mailto:info@goldenpipitrecruiting.com?subject=GP%20Careers%20%E2%80%94%20Executive%20Presence%20Package%20enquiry&amp;body=Hi%20Golden%20Pipit%20Careers%20team%2C%0A%0AI%27d%20like%20to%20learn%20more%20about%20the%20Executive%20Presence%20Package.%20Here%27s%20a%20bit%20about%20my%20background%3A%0A%0A%E2%80%94%20Current%20role%20%26%20organisation%3A%0A%E2%80%94%20Years%20of%20senior%20experience%3A%0A%E2%80%94%20What%20I%27m%20hoping%20to%20achieve%20with%20the%20engagement%3A%0A%E2%80%94%20Timeline%3A%0A%0ALooking%20forward%20to%20a%20conversation.%0A%0AThanks%2C%0A" class="price-cta">Start a conversation →</a>
       </div>
     </div>
   </div>
@@ -765,7 +806,7 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,0.07);paddin
       <h3>Team &amp; Corporate Packages</h3>
       <p>Supporting a team in transition? Onboarding senior hires? We deliver volume packages with priority turnaround and a dedicated account manager.</p>
     </div>
-    <a href="mailto:info@goldenpipitrecruiting.com?subject=GP%20Careers%20%E2%80%94%20Team%20Package" class="btn-gold">Talk to us →</a>
+    <a href="mailto:info@goldenpipitrecruiting.com?subject=GP%20Careers%20%E2%80%94%20Team%20%2F%20Corporate%20Package%20enquiry&amp;body=Hi%20Golden%20Pipit%20Careers%20team%2C%0A%0AI%27d%20like%20to%20discuss%20a%20team%20or%20corporate%20package%20for%20our%20organisation.%20Here%27s%20a%20bit%20of%20context%3A%0A%0A%E2%80%94%20Organisation%3A%0A%E2%80%94%20Number%20of%20people%20we%27d%20like%20to%20support%3A%0A%E2%80%94%20Context%20%28e.g.%20transition%2C%20senior%20hires%2C%20internal%20development%29%3A%0A%E2%80%94%20Timeline%3A%0A%0AThanks%2C%0A" class="btn-gold">Talk to us →</a>
   </div>
 </section>
 
@@ -846,9 +887,16 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,0.07);paddin
       </form>
     </div>
     <div class="form-success" id="form-success">
-      <div class="s-icon">✅</div>
-      <h3>Message received.</h3>
-      <p>Thank you — we'll be in touch within 24 hours to discuss next steps.</p>
+      <div class="s-icon">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M5 12.5L10 17.5L19 7.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <h3>Thank you — message received.</h3>
+      <p>We'll be in touch within 24 hours. In the meantime, you might want to take a look at our Executive Presence sample report.</p>
+      <a href="https://fnk42.github.io/Gpcareers-executive-sample/" target="_blank" rel="noopener noreferrer" class="form-success-cta">View the sample report →</a>
+      <div class="form-success-divider"></div>
+      <div class="form-success-foot">Need to reach us directly? <a href="mailto:info@goldenpipitrecruiting.com">info@goldenpipitrecruiting.com</a></div>
     </div>
   </div>
 </section>
